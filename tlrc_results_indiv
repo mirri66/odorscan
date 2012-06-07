@@ -1,0 +1,63 @@
+#! /bin/bash
+
+subjArr=('35' '43' '52' '56' '57' '58' '61' '62' '64' '65' '66' '67' '68' '69' '71' '72');
+#subjArr=('62');
+
+#condArr=('valaro' 'pleasint');
+#condArr=('val' 'aro' 'pleas' 'int' 'conf' 'crav')
+#condArr=('valXaro' 'pleasXint' 'meanvalpleas' 'meanaroint');
+condArr=('valXaro' 'pleasXint' 'meanvalpleas' 'meanaroint' 'valaro' 'pleasint' 'val' 'aro' 'pleas' 'int' 'conf' 'crav');
+
+for subj in ${subjArr[@]}; do
+cd fixresp${subj}_retroicor
+
+if [ ! -e anat+tlrc.BRIK ]
+then
+# tlrc warp anatomical:
+@auto_tlrc -warp_orig_vol -suffix NONE -base '/home/grace/bin/tlrc/TT_N27+tlrc.' -input anat+orig.
+fi
+
+# tlrc warp beta coeffs, upsampling voxels
+for cond in ${condArr[@]}; do
+if [ -e ${subj}smellepi_${cond}+tlrc.BRIK ]
+then
+rm -rf ${subj}smellepi_${cond}+tlrc.BRIK
+rm -rf ${subj}smellepi_${cond}+tlrc.HEAD
+fi
+
+@auto_tlrc -apar anat+tlrc -input ${subj}smellepi_${cond}+orig -dxyz 2
+
+#reverse scored rating files
+if [ -e ${subj}smellepi_${cond}_rev+tlrc.BRIK ]
+then
+rm -rf ${subj}smellepi_${cond}_rev+tlrc.BRIK
+rm -rf ${subj}smellepi_${cond}_rev+tlrc.HEAD
+fi
+
+@auto_tlrc -apar anat+tlrc -input ${subj}smellepi_${cond}_rev+orig -dxyz 2
+
+
+# blur the data
+if [ -e ${subj}5mmblur_${cond}+tlrc.BRIK ]
+then
+rm -rf ${subj}5mmblur_${cond}+tlrc.BRIK
+rm -rf ${subj}5mmblur_${cond}+tlrc.HEAD
+fi
+
+3dmerge -1blur_fwhm 5 -doall -prefix ${subj}5mmblur_${cond} ${subj}smellepi_${cond}+tlrc
+
+# reverse scored ratings
+if [ -e ${subj}5mmblur_${cond}_rev+tlrc.BRIK ]
+then
+rm -rf ${subj}5mmblur_${cond}_rev+tlrc.BRIK
+rm -rf ${subj}5mmblur_${cond}_rev+tlrc.HEAD
+fi
+
+3dmerge -1blur_fwhm 5 -doall -prefix ${subj}5mmblur_${cond}_rev ${subj}smellepi_${cond}_rev+tlrc
+
+cp ${subj}5mmblur_${cond}+tlrc.* ../groupresults/
+cp ${subj}5mmblur_${cond}_rev+tlrc.* ../groupresults/
+
+done
+cd ..
+done
