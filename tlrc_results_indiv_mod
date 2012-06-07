@@ -1,6 +1,6 @@
 #! /bin/bash
 
-subjArr=('33' '34' '52' '55' '39' '43' '47' '45' '57' '60' '46' '50' '51' '58');
+subjArr=('16' '18' '20' '23' '30' '31' '32');
 #subjArr=('23');
 #subjArr=('18')
 
@@ -21,13 +21,13 @@ fi
 
 # tlrc warp beta coeffs, upsampling voxels
 for cond in ${condArr[@]}; do
-if [ -e ${subj}smellepi_${cond}+tlrc.BRIK ]
-then
-rm -rf ${subj}smellepi_${cond}+tlrc.BRIK
-rm -rf ${subj}smellepi_${cond}+tlrc.HEAD
-fi
+#if [ -e ${subj}smellepi_${cond}+tlrc.BRIK ]
+#then
+#rm -rf ${subj}smellepi_${cond}+tlrc.BRIK
+#rm -rf ${subj}smellepi_${cond}+tlrc.HEAD
+#fi
 
-@auto_tlrc -apar anat+tlrc -input ${subj}smellepi_${cond}+orig -dxyz 2
+#@auto_tlrc -apar anat+tlrc -input ${subj}smellepi_${cond}+orig -dxyz 2
 
 # reverse scored ratings
 if [ -e ${subj}smellepi_${cond}_rev+tlrc.BRIK ]
@@ -41,13 +41,13 @@ fi
 
 
 # blur the data
-if [ -e ${subj}5mmblur_${cond}+tlrc.BRIK ]
-then
-rm -rf ${subj}5mmblur_${cond}+tlrc.BRIK
-rm -rf ${subj}5mmblur_${cond}+tlrc.HEAD
-fi
+#if [ -e ${subj}5mmblur_${cond}+tlrc.BRIK ]
+#then
+#rm -rf ${subj}5mmblur_${cond}+tlrc.BRIK
+#rm -rf ${subj}5mmblur_${cond}+tlrc.HEAD
+#fi
 
-3dmerge -1blur_fwhm 5 -doall -prefix ${subj}5mmblur_${cond} ${subj}smellepi_${cond}+tlrc
+#3dmerge -1blur_fwhm 5 -doall -prefix ${subj}5mmblur_${cond} ${subj}smellepi_${cond}+tlrc
 
 #reverse scored files used here
 if [ -e ${subj}5mmblur_${cond}_rev+tlrc.BRIK ]

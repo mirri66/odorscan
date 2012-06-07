@@ -1,0 +1,36 @@
+#! /bin/bash
+
+#subjArr=('16' '18' '20' '23' '29' '31' '35' '43' '52' '56' '57' '58' '61' '62' '64' '65' '66' '67' '68' '69' '71' '72');
+subjArr=('64');
+
+# enter subj folder
+for i in ${subjArr[@]}; do
+if [ -e fixresp${subj}_mod ]
+then
+        cd fixresp${subj}_mod
+else
+        cd fixresp${subj}_retroicor
+fi
+
+# tlrc anat
+if [ ! -e anat+tlrc.BRIK ]
+then
+@auto_tlrc -warp_orig_vol -suffix NONE -base '/home/grace/bin/tlrc/TT_N27+tlrc.' -input anat+orig
+fi
+
+# tlrc functional run
+if [ -e smellepi_rsmanf+tlrc.BRIK ]
+then
+rm -rf smellepi_rsmanf+tlrc.BRIK
+rm -rf smellepi_rsmanf+tlrc.HEAD
+fi
+@auto_tlrc -apar anat+tlrc -input smellepi_rsmanf+orig -dxyz 4
+
+# smooth
+3dmerge -doall -prefix subj${subj}_epi_TT -1blur_fwhm 8 smellepi_rsmanf+tlrc
+3dAFNItoNIFTI subj${subj}_epi_TT+tlrc
+
+mv subj${subj}
+
+
+done

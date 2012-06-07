@@ -1,0 +1,3 @@
+% 
+addpath ~/matlab/plsgui
+plsgui

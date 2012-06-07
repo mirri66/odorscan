@@ -1,0 +1,171 @@
+
+
+%------------------------------------------------------------------------
+
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%  General Section Start  %
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+prefix		odorscan16
+brain_region	0.15
+win_size	8
+across_run	1
+single_subj	0
+single_ref_scan	0	% 1 for single reference scan, 0 for normal reference scan
+
+single_ref_onset  0	% single reference scan onset
+
+single_ref_number  1	% single reference scan number
+
+normalize	0	% normalize volume mean (keey 0 unless necessary)
+
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%  General Section End  %
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%------------------------------------------------------------------------
+
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%  Condition Section Start  %
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	2
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	3
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	4
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	5
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	6
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	7
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	8
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	9
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	10
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	11
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	12
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	13
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	14
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	15
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	16
+ref_scan_onset   0
+num_ref_scan    1
+
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%  Condition Section End  %
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%------------------------------------------------------------------------
+
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%
+
+	%  Run Section Start  %
+
+	%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+data_files      /home/jimmy/p/fmrisubj/dataset_001/sS1_*.img    % run 1 data pattern (must use wildcard)
+
+event_onsets	0 24 48	72 96 120 144			% for run 1 cond 1
+
+event_onsets	12 36 60 84 108 132 156			% for run 1 cond 2
+
+% ... following above pattern for more conditions of event_onsets in run 1
+
+
+
+data_files      /home/jimmy/p/fmrisubj/dataset_002/data*.img    % run 2 data pattern (must use wildcard)
+
+event_onsets	0 24 48	72 96 120 144			% for run 2 cond 1
+
+event_onsets	12 36 60 84 108 132 156			% for run 2 cond 2
+
+% ... following above pattern for more conditions of event_onsets in run 2
+
+
+
+% ... following above pattern for more runs
+
+
+
+	%%%%%%%%%%%%%%%%%%%%%
+
+	%  Run Section End  %
+
+	%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%------------------------------------------------------------------------
+
+
+

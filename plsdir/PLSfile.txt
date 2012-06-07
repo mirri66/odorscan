@@ -1,0 +1,293 @@
+
+
+%------------------------------------------------------------------------
+
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%  General Section Start  %
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+prefix		odorscan16
+brain_region	0.15
+win_size	8
+across_run	1
+single_subj	0
+single_ref_scan	0	% 1 for single reference scan, 0 for normal reference scan
+
+single_ref_onset  0	% single reference scan onset
+
+single_ref_number  1	% single reference scan number
+
+normalize	0	% normalize volume mean (keey 0 unless necessary)
+
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%  General Section End  %
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%------------------------------------------------------------------------
+
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%  Condition Section Start  %
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	2
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	3
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	4
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	5
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	6
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	7
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	8
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	9
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	0
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	2
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	3
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	4
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	5
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	 
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	1
+ref_scan_onset   0
+num_ref_scan    1
+
+cond_name	6
+ref_scan_onset   0
+num_ref_scan    1
+
