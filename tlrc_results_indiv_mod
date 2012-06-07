@@ -49,7 +49,7 @@ fi
 
 3dmerge -1blur_fwhm 5 -doall -prefix ${subj}5mmblur_${cond} ${subj}smellepi_${cond}+tlrc
 
-#reverse score
+#reverse scored files used here
 if [ -e ${subj}5mmblur_${cond}_rev+tlrc.BRIK ]
 then
 rm -rf ${subj}5mmblur_${cond}_rev+tlrc.BRIK

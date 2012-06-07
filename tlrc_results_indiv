@@ -27,7 +27,7 @@ fi
 
 @auto_tlrc -apar anat+tlrc -input ${subj}smellepi_${cond}+orig -dxyz 2
 
-#reverse scored rating files
+#reverse scored rating files used
 if [ -e ${subj}smellepi_${cond}_rev+tlrc.BRIK ]
 then
 rm -rf ${subj}smellepi_${cond}_rev+tlrc.BRIK
